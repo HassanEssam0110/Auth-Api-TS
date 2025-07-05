@@ -131,7 +131,7 @@ npm start        # Run built JavaScript
 | Method | Route                 | Access | Description                 |
 | ------ | --------------------- | ------ | --------------------------- |
 | POST   | `/api/v1/auth/login`  | Public | Login with email & password |
-| POST   | `/api/v1/auth/signup` | Public | Register a new user         |
+| POST   | `/api/v1/auth/register` | Public | Register a new user         |
 
 ### 👤 Users
 
