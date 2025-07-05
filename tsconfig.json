@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Modern but stable JavaScript features
+    "module": "commonjs", // Node.js uses CommonJS by default
+    "moduleResolution": "node", // Resolve modules like Node.js does
+    "lib": ["ES2020"], // Include modern built-ins like Promise, Map
+    "rootDir": "./src", // Your TS source files
+    "outDir": "./build", // Compiled JS output
+    "strict": true, // Enable all strict type-checking
+    "esModuleInterop": true, // Allow default imports from CommonJS
+    "forceConsistentCasingInFileNames": true, // Avoid cross-platform issues
+    "resolveJsonModule": true, // Import JSON files directly
+    "skipLibCheck": true, // Skip type checking node_modules for speed
+    // "typeRoots": ["./node_modules/@types", "./src/types"],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*", "src/types/**/*"],
+  "exclude": ["node_modules", "build"],
+  "ts-node": {
+    "transpileOnly": false,
+    "files": true
+  }
+}
