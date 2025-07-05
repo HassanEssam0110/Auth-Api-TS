@@ -31,7 +31,7 @@ const getItem = asynchandler(
     const { id } = req.params;
     const item = await itemService.getOne(id);
 
-    if (!item) next(new AppError(NOT_FOUND.code, NOT_FOUND.message));
+    if (!item) return next(new AppError(NOT_FOUND.code, NOT_FOUND.message));
 
     // SEND RESPONSE
     sendResponse(res, OK, item);

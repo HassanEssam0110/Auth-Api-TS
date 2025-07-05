@@ -22,8 +22,6 @@ class ItemService {
   }
 
   async update(id: string, itemData: UpdateItem): Promise<IItem | null> {
-    console.log(itemData);
-
     const item = await Item.findByIdAndUpdate(id, itemData, {
       new: true,
     });
