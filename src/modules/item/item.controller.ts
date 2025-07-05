@@ -81,9 +81,6 @@ const deleteItem = asynchandler(
   async (req: Request, res: Response, next: NextFunction) => {
     const { id } = req.params;
     const item = await itemService.delete(id);
-
-    console.log(item);
-
     if (!item) return next(new AppError(NOT_FOUND.code, NOT_FOUND.message));
 
     // SEND RESPONSE
